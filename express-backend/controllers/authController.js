@@ -6,6 +6,7 @@ const secretKey = "your_secret_key";
 
 const register = (req, res) => {
   const { username, password } = req.body;
+  console.log(req)
   const existingUser = User.find(username);
 
   if (existingUser) {
